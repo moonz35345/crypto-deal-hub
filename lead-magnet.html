@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Starter Kit — Free Download | CryptoDealHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .magnet-page {
+            background: var(--bg);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .magnet-content {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            max-width: 700px;
+            padding: 50px;
+            text-align: center;
+        }
+        .magnet-icon { font-size: 4rem; margin-bottom: 20px; }
+        .magnet-content h1 { font-size: 2rem; margin-bottom: 16px; }
+        .magnet-list { text-align: left; margin: 30px 0; }
+        .magnet-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-light);
+            list-style: none;
+            display: flex;
+            gap: 12px;
+        }
+        .magnet-list li:before { content: "✓"; color: var(--green); font-weight: bold; }
+        .download-btn {
+            padding: 16px 40px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: #000;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .magnet-content { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <section class="magnet-page">
+        <div class="magnet-content">
+            <div class="magnet-icon">🚀</div>
+            <h1>Your Free Crypto Starter Kit</h1>
+            <p style="color:var(--text-secondary); margin-bottom:20px;">
+                Thanks for subscribing! Here's your exclusive checklist to start trading crypto safely.
+            </p>
+            <ul class="magnet-list">
+                <li>✅ 12-Point Security Checklist - Never get hacked again</li>
+                <li>✅ Top 5 Beginner-Friendly Exchanges (fees compared)</li>
+                <li>✅ Wallet Setup Guide - Hardware vs Software explained</li>
+                <li>✅ Tax Reporting Checklist (US, UK, EU)</li>
+                <li>✅ Emergency Recovery Plan - Backup your seed phrase like a pro</li>
+                <li>✅ Phishing Detection Cheat Sheet - Spot scams instantly</li>
+            </ul>
+            <button class="download-btn" onclick="downloadPDF('starter')">📥 Download PDF Guide</button>
+            <p style="font-size:0.8rem; color:var(--text-dim); margin-top:20px;">
+                Also check your email for your bonus: "The Ultimate Bonus Hunter Guide"
+            </p>
+        </div>
+    </section>
+    
+    <script>
+        function downloadPDF(type) {
+            // Create and download PDF content
+            const content = type === 'starter' ? generateStarterPDF() : generateBonusPDF();
+            const blob = new Blob([content], { type: 'application/pdf' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = type === 'starter' ? 'crypto-starter-kit.pdf' : 'bonus-hunter-guide.pdf';
+            a.click();
+        }
+        
+        function generateStarterPDF() {
+            // This will be replaced with actual PDF binary
+            return '%PDF-1.4 placeholder - implement with jsPDF';
+        }
+    </script>
+</body>
+</html>

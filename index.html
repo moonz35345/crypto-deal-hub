@@ -323,13 +323,26 @@
         <div class="nl-box">
             <h2>📬 Weekly Crypto Insights</h2>
             <p>Join 2,000+ readers getting weekly platform comparisons, deal alerts, and beginner tips. No spam, unsubscribe anytime.</p>
-            <form class="nl-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ Subscribed';this.querySelector('button').style.background='var(--green)';">
-                <input type="email" placeholder="your@email.com" required>
+            <form class="nl-form" onsubmit="handleNewsletterSignup(event)">
+                <input type="email" name="email" placeholder="your@email.com" required>
                 <button type="submit">Subscribe</button>
             </form>
+            <p style="margin-top:20px; font-size:0.9rem; color:var(--text-secondary);">
+                <strong>Bonus:</strong> Get instant access to our <a href="/lead-magnet.html" style="color:var(--accent); cursor:pointer;">Crypto Starter Kit</a> (free PDF)
+            </p>
         </div>
     </div>
 </section>
+
+<!-- Lead Magnet Banner after guides -->
+<div class="wrap">
+    <div class="lead-magnet-card">
+        <div style="font-size:2.5rem; margin-bottom:16px;">🎁</div>
+        <h3>Free: Crypto Starter Kit + Bonus Hunter Guide</h3>
+        <p>Get our exclusive 12-point security checklist and bonus finder guide — instantly sent to your inbox.</p>
+        <button onclick="location.href='/lead-magnet.html'" class="btn btn-primary btn-lg">Download Free Now</button>
+    </div>
+</div>
 
 <footer>
     <div class="wrap">
@@ -348,5 +361,7 @@
 
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script>window.addEventListener('scroll',function(){document.getElementById('scrollTop').classList.toggle('visible',window.scrollY>600);});</script>
+<script src="/lead-capture.js"></script>
+<script src="/telegram-leads.js"></script>
 </body>
 </html>
