@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Deal Hub — Best Crypto Deals, Airdrops & Trading Platforms</title>
+    <meta name="description" content="Discover the best crypto deals, airdrops, trading platforms, and beginner guides. Crypto Deal Hub helps you find top offers and save on fees.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0e17;
+            --card: #111827;
+            --card-hover: #1a2236;
+            --accent: #f7931a;
+            --accent2: #627eea;
+            --green: #10b981;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border: #1e293b;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--accent); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a { color: var(--text-muted); text-decoration: none; margin-left: 24px; font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
+        nav a:hover { color: var(--accent); }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+            padding: 80px 0 60px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
+        .hero h1 .highlight { color: var(--accent); }
+        .hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 32px; }
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(247,147,26,0.3); }
+
+        /* Section */
+        section { padding: 60px 0; }
+        .section-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 8px; }
+        .section-sub { color: var(--text-muted); margin-bottom: 32px; }
+
+        /* Cards Grid */
+        .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .card:hover { border-color: var(--accent); transform: translateY(-3px); }
+        .card-tag {
+            display: inline-block;
+            background: rgba(247,147,26,0.15);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .card h3 { font-size: 1.15rem; margin-bottom: 8px; }
+        .card p { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 16px; }
+        .card a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .card a:hover { text-decoration: underline; }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: #1a2236;
+            padding: 14px 20px;
+            text-align: left;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+        }
+        .comparison-table td {
+            padding: 14px 20px;
+            border-top: 1px solid var(--border);
+            font-size: 0.92rem;
+        }
+        .comparison-table tr:hover td { background: var(--card-hover); }
+        .badge {
+            display: inline-block;
+            background: rgba(16,185,129,0.15);
+            color: var(--green);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        /* Guide */
+        .guide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .guide-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+        }
+        .guide-card .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px; height: 32px;
+            background: var(--accent);
+            color: #000;
+            font-weight: 800;
+            border-radius: 50%;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+        }
+        .guide-card h4 { margin-bottom: 8px; }
+        .guide-card p { color: var(--text-muted); font-size: 0.9rem; }
+
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 48px;
+            text-align: center;
+        }
+        .newsletter h2 { font-size: 1.6rem; margin-bottom: 8px; }
+        .newsletter p { color: var(--text-muted); margin-bottom: 24px; }
+        .newsletter-form { display: flex; gap: 12px; max-width: 460px; margin: 0 auto; }
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+        .newsletter-form button {
+            padding: 12px 24px;
+            background: var(--accent);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        .footer-links { margin-bottom: 16px; }
+        .footer-links a { margin: 0 12px; color: var(--text-muted); }
+        .footer-links a:hover { color: var(--accent); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .newsletter-form { flex-direction: column; }
+            .header-inner { flex-direction: column; gap: 12px; }
+            nav a { margin-left: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="/" class="logo">Crypto<span>Deal</span>Hub</a>
+        <nav>
+            <a href="#deals">Deals</a>
+            <a href="#airdrop">Airdrops</a>
+            <a href="#compare">Compare</a>
+            <a href="#guides">Guides</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Find the <span class="highlight">Best Crypto Deals</span> & Start Trading Smarter</h1>
+        <p>We compare top crypto platforms, track airdrops, and surface the best offers so you don't miss out. Updated daily.</p>
+        <a href="https://affiliate99.netlify.app/" class="cta-btn" target="_blank" rel="noopener">Explore Top Crypto Offers →</a>
+    </div>
+</section>
+
+<!-- Deals Section -->
+<section id="deals">
+    <div class="container">
+        <h2 class="section-title">🔥 Hot Crypto Deals</h2>
+        <p class="section-sub">Hand-picked offers from trusted platforms. We only list deals we've verified.</p>
+        <div class="cards">
+            <div class="card">
+                <span class="card-tag">Trading Fees</span>
+                <h3>Zero-Fee Trading for New Users</h3>
+                <p>Start trading crypto with zero maker fees for the first 30 days. Great for beginners looking to minimize costs while learning the ropes.</p>
+                <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Claim This Deal →</a>
+            </div>
+            <div class="card">
+                <span class="card-tag">Staking</span>
+                <h3>Earn Up to 12% APY on Staking</h3>
+                <p>Stake ETH, SOL, or ADA and earn competitive yields. Flexible and locked options available with no minimum deposit required.</p>
+                <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Start Staking →</a>
+            </div>
+            <div class="card">
+                <span class="card-tag">Welcome Bonus</span>
+                <h3>$50 Bonus on First Deposit</h3>
+                <p>Sign up, deposit $100+, and get a $50 bonus credited to your account. Available for a limited time on select platforms.</p>
+                <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Get the Bonus →</a>
+            </div>
+            <div class="card">
+                <span class="card-tag">NFT Marketplace</span>
+                <h3>Free NFT Minting — No Gas Fees</h3>
+                <p>Launch your NFT collection without upfront gas costs. Layer-2 integration means zero fees for creators and collectors alike.</p>
+                <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Mint Free →</a>
+            </div>
+            <div class="card">
+                <span class="card-tag">DeFi</span>
+                <h3>Yield Farming Pools with 30%+ APY</h3>
+                <p>Access curated DeFi yield farming strategies with auto-compounding. Audited smart contracts and insurance options included.</p>
+                <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Farm Yields →</a>
+            </div>
+            <div class="card">
+                <span class="card-tag">Wallet</span>
+                <h3>Crypto Wallet with Built-in Swap</h3>
+                <p>Non-custodial wallet with instant swap functionality across 20+ blockchains. Earn cashback on every swap transaction.</p>
+                <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Download Wallet →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Airdrops Section -->
+<section id="airdrop" style="background: #0d1220;">
+    <div class="container">
+        <h2 class="section-title">🪂 Active Airdrops & Giveaways</h2>
+        <p class="section-sub">Don't miss free token drops. We track the most promising airdrops so you can participate early.</p>
+        <div class="cards">
+            <div class="card">
+                <span class="card-tag">Live Now</span>
+                <h3>LayerZero Ecosystem Airdrop</h3>
+                <p>Early adopters of cross-chain protocols may qualify. Bridge assets across chains to increase eligibility.</p>
+                <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Check Eligibility →</a>
+            </div>
+            <div class="card">
+                <span class="card-tag">Coming Soon</span>
+                <h3>New DEX Token Launch</h3>
+                <p>A decentralized exchange is launching its governance token. Trade on the platform before the snapshot for a chance at the drop.</p>
+                <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Trade Now →</a>
+            </div>
+            <div class="card">
+                <span class="card-tag">Live Now</span>
+                <h3>Staking Rewards Program</h3>
+                <p>Stake tokens for 30 days and earn bonus airdrop points. The longer you stake, the higher your multiplier.</p>
+                <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Stake & Earn →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Compare Section -->
+<section id="compare">
+    <div class="container">
+        <h2 class="section-title">⚖️ Compare Crypto Platforms</h2>
+        <p class="section-sub">Side-by-side comparison of the most popular crypto platforms. Find the best fit for your needs.</p>
+        <div style="overflow-x: auto;">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Trading Fees</th>
+                        <th>Coins Listed</th>
+                        <th>Staking</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Platform A</strong></td>
+                        <td>0.10% / 0.10%</td>
+                        <td>500+</td>
+                        <td><span class="badge">Up to 12%</span></td>
+                        <td><a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener" style="color: var(--accent);">Visit →</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Platform B</strong></td>
+                        <td>0.15% / 0.25%</td>
+                        <td>350+</td>
+                        <td><span class="badge">Up to 8%</span></td>
+                        <td><a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener" style="color: var(--accent);">Visit →</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Platform C</strong></td>
+                        <td>0.00% / 0.05%</td>
+                        <td>200+</td>
+                        <td><span class="badge">Up to 15%</span></td>
+                        <td><a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener" style="color: var(--accent);">Visit →</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Platform D</strong></td>
+                        <td>0.20% / 0.20%</td>
+                        <td>150+</td>
+                        <td><span class="badge">Up to 6%</span></td>
+                        <td><a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener" style="color: var(--accent);">Visit →</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Guides Section -->
+<section id="guides" style="background: #0d1220;">
+    <div class="container">
+        <h2 class="section-title">📚 Crypto Guides for Beginners</h2>
+        <p class="section-sub">New to crypto? Start with our easy-to-follow guides covering everything from wallets to DeFi.</p>
+        <div class="guide-grid">
+            <div class="guide-card">
+                <div class="num">1</div>
+                <h4>How to Buy Your First Bitcoin</h4>
+                <p>Step-by-step guide to purchasing Bitcoin safely. We cover exchange selection, payment methods, and wallet setup.</p>
+            </div>
+            <div class="guide-card">
+                <div class="num">2</div>
+                <h4>Best Crypto Wallets in 2026</h4>
+                <p>Compare hot wallets vs cold wallets. Find the best option for security, convenience, and DeFi access.</p>
+            </div>
+            <div class="guide-card">
+                <div class="num">3</div>
+                <h4>Understanding DeFi Yields</h4>
+                <p>Learn how yield farming, liquidity pools, and staking work — and the risks you need to know about.</p>
+            </div>
+            <div class="guide-card">
+                <div class="num">4</div>
+                <h4>How to Find Airdrops</h4>
+                <p>Strategies for discovering and qualifying for free token airdrops before they explode in value.</p>
+            </div>
+            <div class="guide-card">
+                <div class="num">5</div>
+                <h4>Crypto Tax Basics</h4>
+                <p>A simple overview of how crypto is taxed, what events are taxable, and how to keep records.</p>
+            </div>
+            <div class="guide-card">
+                <div class="num">6</div>
+                <h4>Spot Trading vs Futures</h4>
+                <p>Understand the key differences between spot and futures trading, and which strategy suits your risk profile.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 32px;">
+            <a href="https://affiliate99.netlify.app/" class="cta-btn" target="_blank" rel="noopener">Get Started with a Trusted Platform →</a>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section>
+    <div class="container">
+        <div class="newsletter">
+            <h2>📬 Never Miss a Deal</h2>
+            <p>Join 5,000+ crypto enthusiasts who get weekly deal alerts, airdrop updates, and platform comparisons.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+                <input type="email" placeholder="your@email.com" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="#deals">Deals</a>
+            <a href="#airdrop">Airdrops</a>
+            <a href="#compare">Compare</a>
+            <a href="#guides">Guides</a>
+            <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Our Partner Platform</a>
+        </div>
+        <p>Crypto Deal Hub — Helping you find the best crypto deals since 2024.</p>
+        <p style="margin-top: 8px; font-size: 0.78rem;">Disclaimer: Some links are affiliate links. We may earn a commission at no extra cost to you. Always do your own research before investing.</p>
+        <p style="margin-top: 8px;">© 2026 Crypto Deal Hub. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
