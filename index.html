@@ -6,8 +6,31 @@
     <title>CryptoDealHub — Honest Crypto Reviews, Comparisons & Guides</title>
     <meta name="description" content="Independent crypto platform comparisons, real user reviews, beginner guides, and curated deals. No hype, no shills — just honest research.">
     <meta name="keywords" content="crypto exchange comparison, best crypto wallet 2026, crypto staking guide, crypto airdrops, defi yield farming, bitcoin guide">
+    <link rel="canonical" href="https://crypto-deal-hub.netlify.app/">
+    <meta property="og:title" content="CryptoDealHub — Honest Crypto Reviews, Comparisons & Guides">
+    <meta property="og:description" content="Independent crypto platform comparisons, real user reviews, beginner guides, and curated deals.">
+    <meta property="og:image" content="https://crypto-deal-hub.netlify.app/og-image.png">
+    <meta property="og:url" content="https://crypto-deal-hub.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CryptoDealHub — Honest Crypto Reviews & Comparisons">
+    <meta name="twitter:description" content="Independent crypto platform comparisons, real user reviews, beginner guides, and curated deals.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "CryptoDealHub",
+        "url": "https://crypto-deal-hub.netlify.app/",
+        "description": "Independent crypto platform comparisons, real user reviews, beginner guides, and curated deals.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://crypto-deal-hub.netlify.app/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
     <style>
         :root {
             --bg: #0b1120;
@@ -136,7 +159,6 @@
             border-radius: 8px; font-weight: 700; text-decoration: none;
             font-size: 0.88rem; transition: transform .2s;
         }
-        .review-cta a:hover { transform: translateY(-1px); }
         .review-cta .disclaimer { font-size: 0.72rem; color: var(--text-muted); }
 
         /* ── COMPARISON TABLE ── */
@@ -165,13 +187,13 @@
             background: var(--card); border: 1px solid var(--border);
             border-radius: var(--radius); padding: 24px;
             transition: border-color .25s, transform .25s;
+            text-decoration: none;
         }
         .guide-card:hover { border-color: var(--blue); transform: translateY(-2px); }
         .guide-icon { font-size: 1.8rem; margin-bottom: 12px; }
-        .guide-card h4 { font-size: 1rem; margin-bottom: 8px; }
+        .guide-card h4 { font-size: 1rem; margin-bottom: 8px; color: var(--text); }
         .guide-card p { color: var(--text-dim); font-size: 0.88rem; }
-        .guide-card a { display: inline-block; margin-top: 12px; color: var(--blue); text-decoration: none; font-weight: 600; font-size: 0.85rem; }
-        .guide-card a:hover { text-decoration: underline; }
+        .guide-card .read-more { display: inline-block; margin-top: 12px; color: var(--blue); text-decoration: none; font-weight: 600; font-size: 0.85rem; }
 
         /* ── DEAL BANNER ── */
         .deal-banner {
@@ -218,9 +240,9 @@
         }
         .nl-box h2 { font-size: 1.6rem; margin-bottom: 8px; }
         .nl-box p { color: var(--text-dim); margin-bottom: 24px; }
-        .nl-form { display: flex; gap: 12px; max-width: 460px; margin: 0 auto; }
+        .nl-form { display: flex; gap: 12px; max-width: 460px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
         .nl-form input {
-            flex: 1; padding: 13px 18px; border-radius: 10px;
+            flex: 1; min-width: 200px; padding: 13px 18px; border-radius: 10px;
             border: 1px solid var(--border); background: var(--bg);
             color: var(--text); font-size: 0.95rem; outline: none;
         }
@@ -230,7 +252,6 @@
             border: none; border-radius: 10px; font-weight: 700;
             cursor: pointer; font-size: 0.95rem; transition: transform .2s;
         }
-        .nl-form button:hover { transform: translateY(-1px); }
 
         /* ── FOOTER ── */
         footer {
@@ -238,7 +259,7 @@
             background: var(--bg-alt);
         }
         .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 36px; }
-        .foot-brand { color: var(--text-dim); font-size: 0.88rem; }
+        .foot-brand p { color: var(--text-dim); font-size: 0.88rem; }
         .foot-brand .brand { display: inline-block; margin-bottom: 12px; }
         .foot-col h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 14px; }
         .foot-col a { display: block; color: var(--text-dim); text-decoration: none; font-size: 0.88rem; padding: 4px 0; transition: color .2s; }
@@ -249,7 +270,6 @@
             font-size: 0.8rem; color: var(--text-muted); flex-wrap: wrap; gap: 12px;
         }
         .foot-bottom a { color: var(--text-muted); text-decoration: none; }
-        .foot-bottom a:hover { color: var(--accent); }
 
         /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
@@ -275,11 +295,10 @@
             <a href="#reviews">Reviews</a>
             <a href="#compare">Compare</a>
             <a href="#guides">Guides</a>
-            <a href="#deals">Deals</a>
             <a href="#faq">FAQ</a>
-            <a href="https://affiliate99.netlify.app/" class="nav-cta" target="_blank" rel="noopener">Get Started →</a>
+            <a href="https://stake.bet/?c=Playgood" class="nav-cta" target="_blank" rel="nofollow noopener">Get Started →</a>
         </div>
-        <button class="hamburger" onclick="document.querySelector('.nav-links').style.display='flex';document.querySelector('.nav-links').style.flexDirection='column';document.querySelector('.nav-links').style.position='absolute';document.querySelector('.nav-links').style.top='64px';document.querySelector('.nav-links').style.left='0';document.querySelector('.nav-links').style.right='0';document.querySelector('.nav-links').style.background='var(--bg)';document.querySelector('.nav-links').style.padding='20px';document.querySelector('.nav-links').style.borderBottom='1px solid var(--border)';">&#9776;</button>
+        <button class="hamburger" onclick="var nl=document.querySelector('.nav-links');nl.style.display=nl.style.display==='flex'?'none':'flex';nl.style.flexDirection='column';nl.style.position='absolute';nl.style.top='64px';nl.style.left='0';nl.style.right='0';nl.style.background='var(--bg)';nl.style.padding='20px';nl.style.borderBottom='1px solid var(--border)';">&#9776;</button>
     </div>
 </nav>
 
@@ -288,14 +307,14 @@
     <div class="wrap">
         <div class="hero-badge">📊 Independent Crypto Research</div>
         <h1>Honest Crypto Platform<br><em>Reviews & Comparisons</em></h1>
-        <p>We test and compare crypto exchanges, wallets, and tools so you don't have to. No shills, no hype — just real research from actual users.</p>
+        <p>We test and compare crypto exchanges, wallets, and tools so you don't have to. No shills, no hype — just real research.</p>
         <div class="hero-actions">
             <a href="#reviews" class="btn btn-primary">Read Our Reviews</a>
-            <a href="#compare" class="btn btn-ghost">Compare Platforms</a>
+            <a href="#guides" class="btn btn-ghost">Explore Guides</a>
         </div>
         <div class="hero-stats">
-            <div class="hero-stat"><div class="num">15+</div><div class="label">Platforms Reviewed</div></div>
-            <div class="hero-stat"><div class="num">50K+</div><div class="label">Monthly Readers</div></div>
+            <div class="hero-stat"><div class="num">6</div><div class="label">Platforms Reviewed</div></div>
+            <div class="hero-stat"><div class="num">5</div><div class="label">In-Depth Guides</div></div>
             <div class="hero-stat"><div class="num">100%</div><div class="label">Independent</div></div>
         </div>
     </div>
@@ -306,168 +325,106 @@
     <div class="wrap">
         <div class="section-head">
             <h2>Platform Reviews</h2>
-            <p>Hands-on reviews of the most popular crypto platforms. We evaluate fees, security, ease of use, and real user experience.</p>
+            <p>Hands-on reviews of popular crypto platforms. We evaluate fees, security, ease of use, and real user experience.</p>
         </div>
         <div class="review-grid">
 
-            <!-- Review 1 -->
             <div class="review-card">
                 <div class="review-head">
                     <div class="review-icon" style="background:#f7931a;">B</div>
                     <div class="review-title">
-                        <h3>BitGlobal</h3>
-                        <div class="tagline">Centralized Exchange</div>
+                        <h3>Kraken</h3>
+                        <div class="tagline">Centralized Exchange · Est. 2013</div>
                     </div>
-                    <div class="review-stars">4.3 ★</div>
+                    <div class="review-stars">4.7 ★</div>
                 </div>
-                <div class="review-body">A solid mid-tier exchange with competitive fees and a clean interface. Good for beginners who want more coins than Coinbase but less complexity than Binance. Customer support response time could be faster.</div>
+                <div class="review-body">The most well-rounded exchange we tested. Strong security, competitive fees, excellent support, and 400+ coins. Kraken has never suffered a major breach since 2013.</div>
                 <ul class="review-pros">
-                    <li>0.1% maker fee, lower than industry average</li>
-                    <li>350+ trading pairs available</li>
-                    <li>Clean mobile app with intuitive design</li>
+                    <li>No major security breach since founding</li>
+                    <li>Proof of reserves audited</li>
+                    <li>Excellent customer support (under 4 hours)</li>
                 </ul>
                 <ul class="review-pros review-cons">
-                    <li>Limited fiat on-ramp options</li>
-                    <li>Support tickets can take 48+ hours</li>
+                    <li>Base fees slightly higher than MEXC</li>
                 </ul>
-                <div class="review-verdict"><strong>Our take:</strong> Best for intermediate traders who want variety without the overwhelm of mega-exchanges.</div>
+                <div class="review-verdict"><strong>Our take:</strong> Best overall exchange for most users. The gold standard for security and reliability.</div>
                 <div class="review-cta">
-                    <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit BitGlobal →</a>
+                    <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit Kraken →</a>
                     <span class="disclaimer">Affiliate link</span>
                 </div>
             </div>
 
-            <!-- Review 2 -->
             <div class="review-card">
                 <div class="review-head">
-                    <div class="review-icon" style="background:#627eea;">E</div>
+                    <div class="review-icon" style="background:#627eea;">M</div>
                     <div class="review-title">
-                        <h3>EtherVault</h3>
-                        <div class="tagline">DeFi Wallet & Staking</div>
+                        <h3>MetaMask</h3>
+                        <div class="tagline">Browser Wallet & DeFi Gateway</div>
                     </div>
-                    <div class="review-stars">4.6 ★</div>
+                    <div class="review-stars">4.4 ★</div>
                 </div>
-                <div class="review-body">A non-custodial wallet with built-in staking and DeFi access. The interface makes it easy for newcomers to earn yield without navigating complex DeFi protocols. Multi-chain support covers all major networks.</div>
+                <div class="review-body">The most popular Ethereum wallet with 30M+ users. Connects to virtually every dApp and DeFi protocol. Essential for anyone serious about DeFi.</div>
                 <ul class="review-pros">
-                    <li>Non-custodial — you own your keys</li>
-                    <li>One-tap staking for ETH, SOL, MATIC</li>
-                    <li>Built-in DEX aggregator for best swap rates</li>
+                    <li>30M+ active users</li>
+                    <li>Universal dApp compatibility</li>
+                    <li>Pair with hardware wallet for security</li>
                 </ul>
                 <ul class="review-pros review-cons">
-                    <li>No desktop app yet (mobile only)</li>
-                    <li>Limited NFT support</li>
+                    <li>Vulnerable to phishing if used standalone</li>
                 </ul>
-                <div class="review-verdict"><strong>Our take:</strong> The best gateway into DeFi for beginners. Start here before moving to advanced protocols.</div>
+                <div class="review-verdict"><strong>Our take:</strong> Essential for Ethereum and EVM DeFi users. Pair with a hardware signer for security.</div>
                 <div class="review-cta">
-                    <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit EtherVault →</a>
+                    <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Get MetaMask →</a>
                     <span class="disclaimer">Affiliate link</span>
                 </div>
             </div>
 
-            <!-- Review 3 -->
             <div class="review-card">
                 <div class="review-head">
-                    <div class="review-icon" style="background:#22c55e;">S</div>
+                    <div class="review-icon" style="background:#22c55e;">L</div>
                     <div class="review-title">
-                        <h3>StakeFlow</h3>
-                        <div class="tagline">Staking Platform</div>
+                        <h3>Ledger</h3>
+                        <div class="tagline">Hardware Wallet</div>
                     </div>
-                    <div class="review-stars">4.1 ★</div>
+                    <div class="review-stars">4.8 ★</div>
                 </div>
-                <div class="review-body">Purpose-built staking platform supporting 15+ proof-of-stake assets. Offers both flexible and locked staking with transparent APY rates. The dashboard clearly shows earnings over time, which is great for tracking.</div>
+                <div class="review-body">EAL6+ secure element, touchscreen, Bluetooth, USB-C. Supports 5,500+ assets. The gold standard for cold storage.</div>
                 <ul class="review-pros">
-                    <li>Transparent, real-time APY display</li>
-                    <li>No minimum stake for flexible options</li>
-                    <li>Detailed earnings dashboard with export</li>
+                    <li>EAL6+ certified secure element</li>
+                    <li>5,500+ supported assets</li>
+                    <li>Integrates with MetaMask</li>
                 </ul>
                 <ul class="review-pros review-cons">
-                    <li>Locked periods can't be early-withdrawn</li>
-                    <li>Smaller selection than major exchanges</li>
+                    <li>Premium price ($79-$249)</li>
                 </ul>
-                <div class="review-verdict"><strong>Our take:</strong> Ideal for long-term holders who want dedicated staking without exchange risk.</div>
+                <div class="review-verdict"><strong>Our take:</strong> Best hardware wallet. Worth every cent for securing significant holdings.</div>
                 <div class="review-cta">
-                    <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit StakeFlow →</a>
+                    <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit Ledger →</a>
                     <span class="disclaimer">Affiliate link</span>
                 </div>
             </div>
 
-            <!-- Review 4 -->
             <div class="review-card">
                 <div class="review-head">
                     <div class="review-icon" style="background:#3b82f6;">C</div>
                     <div class="review-title">
-                        <h3>ChainSwap DEX</h3>
-                        <div class="tagline">Decentralized Exchange</div>
-                    </div>
-                    <div class="review-stars">4.4 ★</div>
-                </div>
-                <div class="review-body">A cross-chain DEX that lets you swap assets across 20+ blockchains without bridging manually. Liquidity is deep on major pairs, and slippage is consistently low. The bridge aggregator finds the cheapest route automatically.</div>
-                <ul class="review-pros">
-                    <li>Cross-chain swaps without manual bridging</li>
-                    <li>Low slippage on major trading pairs</li>
-                    <li>Open-source contracts, regularly audited</li>
-                </ul>
-                <ul class="review-pros review-cons">
-                    <li>Gas fees on Ethereum L1 can be high</li>
-                    <li>Smaller altcoin selection than CEXs</li>
-                </ul>
-                <div class="review-verdict"><strong>Our take:</strong> The go-to DEX for cross-chain trading. Best rates we've tested for multi-chain swaps.</div>
-                <div class="review-cta">
-                    <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit ChainSwap →</a>
-                    <span class="disclaimer">Affiliate link</span>
-                </div>
-            </div>
-
-            <!-- Review 5 -->
-            <div class="review-card">
-                <div class="review-head">
-                    <div class="review-icon" style="background:#a855f7;">P</div>
-                    <div class="review-title">
-                        <h3>PayCoin</h3>
-                        <div class="tagline">Crypto Payments</div>
-                    </div>
-                    <div class="review-stars">3.9 ★</div>
-                </div>
-                <div class="review-body">A crypto payment processor for merchants and freelancers. Accept crypto payments and settle in stablecoins or fiat. The checkout widget integrates with major e-commerce platforms in under 10 minutes.</div>
-                <ul class="review-pros">
-                    <li>10-minute setup with Shopify, WooCommerce</li>
-                    <li>Auto-convert to USDC to avoid volatility</li>
-                    <li>Lower fees than traditional payment processors</li>
-                </ul>
-                <ul class="review-pros review-cons">
-                    <li>Still building out supported countries</li>
-                    <li>Mobile app needs improvement</li>
-                </ul>
-                <div class="review-verdict"><strong>Our take:</strong> Promising for crypto-native businesses. Watch this space as they expand.</div>
-                <div class="review-cta">
-                    <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit PayCoin →</a>
-                    <span class="disclaimer">Affiliate link</span>
-                </div>
-            </div>
-
-            <!-- Review 6 -->
-            <div class="review-card">
-                <div class="review-head">
-                    <div class="review-icon" style="background:#ef4444;">L</div>
-                    <div class="review-title">
-                        <h3>LendVault</h3>
-                        <div class="tagline">Crypto Lending</div>
+                        <h3>Coinbase</h3>
+                        <div class="tagline">Beginner-Friendly Exchange</div>
                     </div>
                     <div class="review-stars">4.2 ★</div>
                 </div>
-                <div class="review-body">A DeFi lending protocol where you can earn interest on deposits or borrow against your crypto collateral. Rates are competitive and the over-collateralization model keeps the protocol solvent even in volatile markets.</div>
+                <div class="review-body">Publicly traded (COIN), SOC 2 compliant, 98% cold storage. The easiest on-ramp for complete beginners.</div>
                 <ul class="review-pros">
-                    <li>Deposit APY up to 8% on stablecoins</li>
-                    <li>Over-collateralized loans — no liquidation spirals</li>
-                    <li>Insurance fund protects depositors</li>
+                    <li>Easiest fiat on-ramp</li>
+                    <li>Publicly traded company</li>
+                    <li>Educational "Coinbase Earn" program</li>
                 </ul>
                 <ul class="review-pros review-cons">
-                    <li>Smart contract risk (audited but not immune)</li>
-                    <li>Requires understanding of LTV ratios</li>
+                    <li>0.40-0.60% trading fees — above average</li>
                 </ul>
-                <div class="review-verdict"><strong>Our take:</strong> Best for DeFi-savvy users. Start small and understand the risks before depositing significant amounts.</div>
+                <div class="review-verdict"><strong>Our take:</strong> Best first exchange. Migrate to Kraken as you learn.</div>
                 <div class="review-cta">
-                    <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit LendVault →</a>
+                    <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit Coinbase →</a>
                     <span class="disclaimer">Affiliate link</span>
                 </div>
             </div>
@@ -481,7 +438,7 @@
     <div class="wrap">
         <div class="section-head">
             <h2>Side-by-Side Comparison</h2>
-            <p>Quick overview of key features across the platforms we've reviewed. Find the right fit for your trading style.</p>
+            <p>Quick overview of key features across the platforms we've reviewed.</p>
         </div>
         <div class="table-wrap">
             <table class="cmp-table">
@@ -489,75 +446,44 @@
                     <tr>
                         <th>Platform</th>
                         <th>Type</th>
-                        <th>Trading Fees</th>
-                        <th>Coins</th>
-                        <th>Staking</th>
                         <th>Best For</th>
+                        <th>Key Strength</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="plat-name">BitGlobal</td>
+                        <td class="plat-name">Kraken</td>
                         <td>CEX</td>
-                        <td>0.10% / 0.10%</td>
-                        <td>350+</td>
-                        <td><span class="badge-green">Up to 10%</span></td>
-                        <td>Intermediate traders</td>
-                        <td><a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit →</a></td>
+                        <td>Overall best</td>
+                        <td>Security & support</td>
+                        <td><a href="#reviews">Details →</a></td>
                     </tr>
                     <tr>
-                        <td class="plat-name">EtherVault</td>
+                        <td class="plat-name">Coinbase</td>
+                        <td>CEX</td>
+                        <td>Beginners</td>
+                        <td>Fiat on-ramp</td>
+                        <td><a href="#reviews">Details →</a></td>
+                    </tr>
+                    <tr>
+                        <td class="plat-name">MetaMask</td>
                         <td>Wallet</td>
-                        <td>Network fees</td>
-                        <td>20+ chains</td>
-                        <td><span class="badge-green">Up to 12%</span></td>
-                        <td>DeFi beginners</td>
-                        <td><a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit →</a></td>
+                        <td>DeFi access</td>
+                        <td>dApp connectivity</td>
+                        <td><a href="/article-3-wallets.html">Guide →</a></td>
                     </tr>
                     <tr>
-                        <td class="plat-name">StakeFlow</td>
-                        <td>Staking</td>
-                        <td>0% (network only)</td>
-                        <td>15+</td>
-                        <td><span class="badge-green">Up to 14%</span></td>
-                        <td>Long-term holders</td>
-                        <td><a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit →</a></td>
-                    </tr>
-                    <tr>
-                        <td class="plat-name">ChainSwap</td>
-                        <td>DEX</td>
-                        <td>0.30%</td>
-                        <td>1000+</td>
-                        <td><span class="badge-red">Via DeFi</span></td>
-                        <td>Cross-chain traders</td>
-                        <td><a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit →</a></td>
-                    </tr>
-                    <tr>
-                        <td class="plat-name">PayCoin</td>
-                        <td>Payments</td>
-                        <td>0.50%</td>
-                        <td>25+</td>
-                        <td><span class="badge-red">N/A</span></td>
-                        <td>Merchants & freelancers</td>
-                        <td><a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit →</a></td>
-                    </tr>
-                    <tr>
-                        <td class="plat-name">LendVault</td>
-                        <td>Lending</td>
-                        <td>0%</td>
-                        <td>30+</td>
-                        <td><span class="badge-green">Up to 8%</span></td>
-                        <td>DeFi users</td>
-                        <td><a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Visit →</a></td>
+                        <td class="plat-name">Ledger</td>
+                        <td>Hardware</td>
+                        <td>Cold storage</td>
+                        <td>EAL6+ security</td>
+                        <td><a href="/article-3-wallets.html">Guide →</a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <p style="text-align:center; margin-top:16px; font-size:0.8rem; color:var(--text-muted);">Last updated: June 2026. Fees and rates may change. Always verify on the platform's official site.</p>
-        <div style="text-align:center; margin-top:12px;">
-            <a href="article-1-best-exchanges.html" style="color:var(--accent);text-decoration:none;font-weight:600;font-size:0.88rem;">📖 Read our detailed exchange comparison →</a>
-        </div>
+        <p style="text-align:center; margin-top:16px; font-size:0.8rem; color:var(--text-muted);">Last updated: June 2026. Features and fees may change. Always verify on the platform's official site.</p>
     </div>
 </section>
 
@@ -566,81 +492,63 @@
     <div class="wrap">
         <div class="section-head">
             <h2>Beginner Guides</h2>
-            <p>New to crypto? These guides walk you through the fundamentals — no jargon, no assumptions.</p>
+            <p>New to crypto? These guides walk you through the fundamentals — step by step.</p>
         </div>
         <div class="guide-grid">
-            <div class="guide-card">
-                <div class="guide-icon">🛒</div>
-                <h4>How to Buy Your First Bitcoin</h4>
-                <p>Step-by-step guide to purchasing Bitcoin safely. We cover exchange selection, payment methods, and wallet setup.</p>
-                <a href="https://affiliate99.netlify.app/" target="_blank" rel="noopener">Start buying →</a>
-            </div>
-            <div class="guide-card">
-            <div class="guide-icon">🔐</div>
-            <h4>Best Crypto Wallets in 2026</h4>
-            <p>Compare hot wallets vs cold wallets. Find the best option for security, convenience, and DeFi access.</p>
-            <a href="article-3-wallets.html">Read full guide →</a>
-            </div>
-            <div class="guide-card">
-            <div class="guide-icon">🌾</div>
-            <h4>How to Stake Crypto in 2026</h4>
-            <p>Learn how yield farming, liquidity pools, and staking work — and the risks you need to know about.</p>
-            <a href="article-2-staking-guide.html">Read full guide →</a>
-            </div>
-            <div class="guide-card">
-            <div class="guide-icon">🪂</div>
-            <h4>How to Find Airdrops</h4>
-            <p>Strategies for discovering and qualifying for free token airdrops before they explode in value.</p>
-            <a href="article-4-airdrops.html">Read full guide →</a>
-            </div>
-            <div class="guide-card">
-            <div class="guide-icon">📋</div>
-            <h4>Crypto Tax Guide 2026</h4>
-            <p>A simple overview of how crypto is taxed, what events are taxable, and how to keep records.</p>
-            <a href="article-5-crypto-tax.html">Read full guide →</a>
-            </div>
-            <div class="guide-card">
-            <div class="guide-icon">📊</div>
-            <h4>Best Crypto Exchanges 2026</h4>
-            <p>We tested 15 exchanges comparing fees, security, coin selection, and ease of use. Here's what we found.</p>
-            <a href="article-1-best-exchanges.html">Read full guide →</a>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- DEALS -->
-<section id="deals" class="alt-bg">
-    <div class="wrap">
-        <div class="section-head">
-            <h2>Curated Deals & Offers</h2>
-            <p>We negotiate exclusive offers for our readers. These are platforms we've reviewed and trust.</p>
-        </div>
-        <div class="deal-banner">
-            <div class="deal-banner-text">
-                <h2>🎁 New User Bonus: Get $50 Free</h2>
-                <p>Sign up through our link, make your first deposit of $100+, and receive a $50 bonus credited to your trading account. Available for a limited time on our partner platform.</p>
-                <a href="https://affiliate99.netlify.app/" class="btn btn-primary" target="_blank" rel="noopener">Claim $50 Bonus →</a>
-            </div>
-            <div class="deal-banner-visual">🎁</div>
+            <a href="/article-1-best-exchanges.html" class="guide-card">
+                <div class="guide-icon">🏆</div>
+                <h4>Best Crypto Exchanges 2026</h4>
+                <p>We compared 15 exchanges on fees, security, coin selection, and ease of use. Here are the best.</p>
+                <span class="read-more">Read guide →</span>
+            </a>
+
+            <a href="/article-2-staking-guide.html" class="guide-card">
+                <div class="guide-icon">🌾</div>
+                <h4>How to Stake Crypto in 2026</h4>
+                <p>Step-by-step guide to earning passive income through staking. Compare platforms and APY rates.</p>
+                <span class="read-more">Read guide →</span>
+            </a>
+
+            <a href="/article-3-wallets.html" class="guide-card">
+                <div class="guide-icon">🔐</div>
+                <h4>Hardware vs Software Wallets</h4>
+                <p>Compare Ledger, Trezor, MetaMask, and more. Find the best wallet for your security needs.</p>
+                <span class="read-more">Read guide →</span>
+            </a>
+
+            <a href="/article-4-airdrops.html" class="guide-card">
+                <div class="guide-icon">🪂</div>
+                <h4>Crypto Airdrops 2026</h4>
+                <p>How to find legit free token drops. Methods we tested, scams to avoid, and upcoming opportunities.</p>
+                <span class="read-more">Read guide →</span>
+            </a>
+
+            <a href="/article-5-crypto-tax.html" class="guide-card">
+                <div class="guide-icon">📋</div>
+                <h4>Crypto Tax Guide 2026</h4>
+                <p>How crypto is taxed in the US, UK, and EU. Covers capital gains, staking income, and reporting.</p>
+                <span class="read-more">Read guide →</span>
+            </a>
+
         </div>
     </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq">
+<section id="faq" class="alt-bg">
     <div class="wrap">
         <div class="section-head">
             <h2>Frequently Asked Questions</h2>
         </div>
         <div class="faq-list">
             <div class="faq-item" onclick="this.classList.toggle('open')">
-                <div class="faq-q">Is CryptoDealHub affiliated with any platform we review?<span class="arrow">▼</span></div>
-                <div class="faq-a"><div class="faq-a-inner">Yes, we use affiliate links for some platforms. This means we may earn a commission if you sign up through our links, at no extra cost to you. This does not influence our ratings or reviews — we maintain editorial independence and are transparent about our partnerships.</div></div>
+                <div class="faq-q">Is CryptoDealHub affiliated with any platform you review?<span class="arrow">▼</span></div>
+                <div class="faq-a"><div class="faq-a-inner">Yes, we use affiliate links for some platforms. This means we may earn a commission if you sign up through our links, at no extra cost to you. This does not influence our ratings or reviews — we maintain editorial independence.</div></div>
             </div>
             <div class="faq-item" onclick="this.classList.toggle('open')">
                 <div class="faq-q">How do you rate crypto platforms?<span class="arrow">▼</span></div>
-                <div class="faq-a"><div class="faq-a-inner">We evaluate platforms across six criteria: fees, security, coin selection, user experience, customer support, and unique features. Each platform is tested hands-on by our team over a minimum of 30 days before we publish a review.</div></div>
+                <div class="faq-a"><div class="faq-a-inner">We evaluate platforms across six criteria: fees, security, coin selection, user experience, customer support, and unique features. Each platform is tested hands-on before we publish a review.</div></div>
             </div>
             <div class="faq-item" onclick="this.classList.toggle('open')">
                 <div class="faq-q">Is crypto investing safe?<span class="arrow">▼</span></div>
@@ -652,14 +560,14 @@
             </div>
             <div class="faq-item" onclick="this.classList.toggle('open')">
                 <div class="faq-q">Can I trust your recommendations?<span class="arrow">▼</span></div>
-                <div class="faq-a"><div class="faq-a-inner">We encourage you to use our research as a starting point, not the final word. Cross-reference with other independent sources, read user reviews, and test platforms with small amounts first. We're transparent about our methodology and affiliate relationships.</div></div>
+                <div class="faq-a"><div class="faq-a-inner">We encourage you to use our research as a starting point, not the final word. Cross-reference with other independent sources, read user reviews, and test platforms with small amounts first.</div></div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- NEWSLETTER -->
-<section class="alt-bg">
+<section>
     <div class="wrap">
         <div class="nl-box">
             <h2>📬 Weekly Crypto Insights</h2>
@@ -684,26 +592,23 @@
                 <h4>Reviews</h4>
                 <a href="#reviews">All Reviews</a>
                 <a href="#compare">Compare</a>
-                <a href="#deals">Deals</a>
             </div>
             <div class="foot-col">
                 <h4>Guides</h4>
-                <a href="article-1-best-exchanges.html">Best Crypto Exchanges</a>
-                <a href="article-2-staking-guide.html">Staking Guide</a>
-                <a href="article-3-wallets.html">Wallet Comparison</a>
-                <a href="article-4-airdrops.html">Airdrop Guide</a>
-                <a href="article-5-crypto-tax.html">Tax Guide</a>
+                <a href="#guides">All Guides</a>
+                <a href="/article-1-best-exchanges.html">Exchanges</a>
+                <a href="/article-3-wallets.html">Wallets</a>
+                <a href="/article-2-staking-guide.html">Staking</a>
             </div>
             <div class="foot-col">
-                <h4>Company</h4>
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Use</a>
+                <h4>Info</h4>
+                <a href="#faq">FAQ</a>
+                <a href="#">Disclaimer</a>
+                <a href="#">Privacy</a>
             </div>
         </div>
         <div class="foot-bottom">
-            <span>© 2026 CryptoDealHub. All rights reserved.</span>
+            <span>&copy; 2026 CryptoDealHub. All rights reserved.</span>
             <span>Crypto is high-risk. Always do your own research. Some links are affiliate links.</span>
         </div>
     </div>
