@@ -8,12 +8,14 @@
     <meta name="keywords" content="crypto exchange comparison, best crypto wallet 2026, crypto staking guide, crypto airdrops, defi yield farming, bitcoin guide">
     <link rel="canonical" href="https://crypto-deal-hub.netlify.app/">
     <meta property="og:title" content="CryptoDealHub — Honest Crypto Reviews, Comparisons & Guides">
-    <meta property="og:description" content="Independent crypto platform comparisons, real user reviews, beginner guides, and curated deals. No hype, no shills — just honest research.">
+    <meta property="og:description" content="Independent crypto platform comparisons, real user reviews, beginner guides, and curated deals.">
     <meta property="og:url" content="https://crypto-deal-hub.netlify.app/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CryptoDealHub — Honest Crypto Reviews & Comparisons">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -28,151 +30,21 @@
         }
     }
     </script>
-    <style>
-        :root{--bg:#0b1120;--bg-alt:#0f1729;--card:#131c31;--card-alt:#182240;--border:#1e2d4a;--accent:#f7931a;--accent-glow:rgba(247,147,26,0.15);--blue:#3b82f6;--green:#22c55e;--red:#ef4444;--text:#e2e8f0;--text-dim:#94a3b8;--text-muted:#64748b;--radius:12px}
-        *{margin:0;padding:0;box-sizing:border-box}
-        html{scroll-behavior:smooth}
-        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
-        .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-
-        /* NAV */
-        .nav{position:sticky;top:0;z-index:200;background:rgba(11,17,32,0.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-        .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-        .brand{font-size:1.35rem;font-weight:900;color:var(--accent);text-decoration:none;letter-spacing:-0.5px}
-        .brand span{color:var(--text)}
-        .nav-links{display:flex;gap:28px;align-items:center}
-        .nav-links a{color:var(--text-dim);text-decoration:none;font-size:0.88rem;font-weight:600;transition:color .2s}
-        .nav-links a:hover{color:var(--text)}
-        @media(max-width:900px){.nav-links{display:none}}
-        .nav-cta{background:var(--accent);color:#000!important;padding:8px 18px;border-radius:8px;font-weight:700!important;transition:transform .2s,box-shadow .2s!important}
-        .nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(247,147,26,0.3)}
-        .hamburger{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer}
-
-        /* HERO */
-        .hero{padding:80px 0 60px;background:radial-gradient(ellipse at 50% 0%,rgba(59,130,246,0.1) 0%,transparent 60%),var(--bg);border-bottom:1px solid var(--border);text-align:center}
-        .hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--accent-glow);color:var(--accent);font-size:0.78rem;font-weight:700;padding:6px 14px;border-radius:20px;margin-bottom:16px;text-transform:uppercase;letter-spacing:0.5px}
-        .hero h1{font-size:3rem;font-weight:900;line-height:1.15;margin-bottom:16px;letter-spacing:-1px}
-        .hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--accent),#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-        .hero p{font-size:1.12rem;color:var(--text-dim);max-width:640px;margin:0 auto 32px}
-        .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-        .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:10px;font-weight:700;text-decoration:none;font-size:0.95rem;transition:all .2s;border:none;cursor:pointer}
-        .btn-primary{background:var(--accent);color:#000}
-        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(247,147,26,0.3)}
-        .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border)}
-        .btn-ghost:hover{border-color:var(--text-dim)}
-        .hero-stats{display:flex;gap:48px;justify-content:center;margin-top:40px}
-        .hero-stat{text-align:center}
-        .hero-stat .num{font-size:1.5rem;font-weight:800;color:var(--accent)}
-        .hero-stat .label{font-size:0.8rem;color:var(--text-muted);margin-top:2px}
-
-        /* SECTIONS */
-        section{padding:72px 0}
-        .section-head{text-align:center;margin-bottom:48px}
-        .section-head h2{font-size:2rem;font-weight:800;margin-bottom:10px;letter-spacing:-0.5px}
-        .section-head p{color:var(--text-dim);max-width:560px;margin:0 auto;font-size:1rem}
-        .alt-bg{background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-        .section-updated{text-align:center;margin-top:16px;font-size:0.8rem;color:var(--text-muted)}
-
-        /* REVIEW CARDS */
-        .review-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px}
-        .review-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;transition:border-color .25s,transform .25s;display:flex;flex-direction:column}
-        .review-card:hover{border-color:var(--accent);transform:translateY(-3px)}
-        .review-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}
-        .review-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:900;color:#000;flex-shrink:0}
-        .review-title h3{font-size:1.1rem;font-weight:700}
-        .review-title .tagline{font-size:0.82rem;color:var(--text-muted)}
-        .review-stars{margin-left:auto;color:var(--accent);font-size:0.9rem;font-weight:700}
-        .review-body{color:var(--text-dim);font-size:0.92rem;margin-bottom:16px;flex:1}
-        .review-pros{margin-bottom:14px}
-        .review-pros li{list-style:none;font-size:0.85rem;color:var(--text-dim);padding:2px 0;display:flex;gap:8px}
-        .review-pros li::before{content:"✓";color:var(--green);font-weight:700}
-        .review-cons li::before{content:"✗";color:var(--red);font-weight:700}
-        .review-verdict{background:var(--card-alt);border-radius:8px;padding:12px 14px;font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;border-left:3px solid var(--accent)}
-        .review-verdict strong{color:var(--text)}
-        .review-cta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto}
-        .review-cta a{background:var(--accent);color:#000;padding:10px 20px;border-radius:8px;font-weight:700;text-decoration:none;font-size:0.88rem;transition:transform .2s}
-        .review-cta a:hover{transform:translateY(-1px)}
-        .review-cta .disclaimer{font-size:0.72rem;color:var(--text-muted)}
-        .btn-disabled{background:var(--card-alt)!important;color:var(--text-muted)!important;border:1px solid var(--border)!important;cursor:not-allowed}
-        .btn-disabled:hover{transform:none!important;box-shadow:none!important}
-
-        /* COMPARISON TABLE */
-        .table-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--border)}
-        .cmp-table{width:100%;border-collapse:collapse;background:var(--card)}
-        .cmp-table th{background:var(--card-alt);padding:14px 18px;text-align:left;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.6px;color:var(--text-muted);font-weight:700;border-bottom:1px solid var(--border)}
-        .cmp-table td{padding:14px 18px;border-bottom:1px solid var(--border);font-size:0.9rem;vertical-align:middle}
-        .cmp-table tr:last-child td{border-bottom:none}
-        .cmp-table tr:hover td{background:rgba(255,255,255,0.02)}
-        .cmp-table .plat-name{font-weight:700;color:var(--text)}
-        .badge-green{background:rgba(34,197,94,0.12);color:var(--green);font-size:0.72rem;font-weight:700;padding:3px 8px;border-radius:4px}
-        .badge-red{background:rgba(239,68,68,0.12);color:var(--red);font-size:0.72rem;font-weight:700;padding:3px 8px;border-radius:4px}
-        .cmp-table a{color:var(--accent);text-decoration:none;font-weight:600}
-        .cmp-table a:hover{text-decoration:underline}
-
-        /* GUIDE GRID */
-        .guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
-        .guide-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:border-color .25s,transform .25s;text-decoration:none}
-        .guide-card:hover{border-color:var(--blue);transform:translateY(-2px)}
-        .guide-icon{font-size:1.8rem;margin-bottom:12px}
-        .guide-card h4{font-size:1rem;margin-bottom:8px;color:var(--text)}
-        .guide-card p{color:var(--text-dim);font-size:0.88rem}
-        .guide-card .read-more{display:inline-block;margin-top:12px;color:var(--blue);text-decoration:none;font-weight:600;font-size:0.85rem}
-
-        /* ABOUT / TRUST */
-        .about-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;max-width:900px;margin:0 auto}
-        .about-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;text-align:center}
-        .about-icon{font-size:2rem;margin-bottom:12px}
-        .about-card h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
-        .about-card p{color:var(--text-dim);font-size:0.9rem}
-
-        /* FAQ */
-        .faq-list{max-width:760px;margin:0 auto}
-        .faq-item{border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden}
-        .faq-q{padding:18px 24px;cursor:pointer;font-weight:700;display:flex;justify-content:space-between;align-items:center;background:var(--card);transition:background .2s}
-        .faq-q:hover{background:var(--card-alt)}
-        .faq-q .arrow{transition:transform .3s;color:var(--text-muted)}
-        .faq-item.open .faq-q .arrow{transform:rotate(180deg)}
-        .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;background:var(--card-alt)}
-        .faq-item.open .faq-a{max-height:400px}
-        .faq-a-inner{padding:0 24px 18px;color:var(--text-dim);font-size:0.92rem}
-
-        /* NEWSLETTER */
-        .nl-box{background:linear-gradient(135deg,rgba(247,147,26,0.08),rgba(59,130,246,0.08));border:1px solid var(--border);border-radius:16px;padding:48px;text-align:center}
-        .nl-box h2{font-size:1.6rem;margin-bottom:8px}
-        .nl-box p{color:var(--text-dim);margin-bottom:24px}
-        .nl-form{display:flex;gap:12px;max-width:460px;margin:0 auto;flex-wrap:wrap;justify-content:center}
-        .nl-form input{flex:1;min-width:200px;padding:13px 18px;border-radius:10px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:0.95rem;outline:none}
-        .nl-form input:focus{border-color:var(--accent)}
-        .nl-form button{padding:13px 26px;background:var(--accent);color:#000;border:none;border-radius:10px;font-weight:700;cursor:pointer;font-size:0.95rem}
-
-        /* FOOTER */
-        footer{border-top:1px solid var(--border);padding:48px 0 32px;background:var(--bg-alt)}
-        .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
-        .foot-brand p{color:var(--text-dim);font-size:0.88rem}
-        .foot-brand .brand{display:inline-block;margin-bottom:12px}
-        .foot-col h4{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-muted);margin-bottom:14px}
-        .foot-col a{display:block;color:var(--text-dim);text-decoration:none;font-size:0.88rem;padding:4px 0;transition:color .2s}
-        .foot-col a:hover{color:var(--accent)}
-        .foot-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:var(--text-muted);flex-wrap:wrap;gap:12px}
-
-        /* RESPONSIVE */
-        @media(max-width:768px){
-            .hero h1{font-size:2.1rem}
-            .hero-stats{gap:24px}
-            .nav-links{display:none}
-            .hamburger{display:block}
-            .foot-grid{grid-template-columns:1fr 1fr;gap:24px}
-            .nl-form{flex-direction:column}
-            .review-cta{flex-direction:column;align-items:flex-start}
-        }
-    </style>
 </head>
 <body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    🔒 We test every platform hands-on — real accounts, real deposits, real trades. <a href="#about">Learn more about our methodology →</a>
+</div>
 
 <!-- NAV -->
 <nav class="nav">
     <div class="wrap nav-inner">
-        <a href="/" class="brand">Crypto<span>Deal</span>Hub</a>
+        <a href="/" class="brand">
+            <div class="brand-icon">C</div>
+            <span>Crypto</span>DealHub
+        </a>
         <div class="nav-links">
             <a href="#reviews">Reviews</a>
             <a href="#compare">Compare</a>
@@ -181,24 +53,33 @@
             <a href="#faq">FAQ</a>
             <a href="https://stake.bet/?c=Playgood" class="nav-cta" target="_blank" rel="nofollow noopener">Get Started →</a>
         </div>
-        <button class="hamburger" onclick="var nl=document.querySelector('.nav-links');nl.style.display=nl.style.display==='flex'?'none':'flex';nl.style.flexDirection='column';nl.style.position='absolute';nl.style.top='64px';nl.style.left='0';nl.style.right='0';nl.style.background='var(--bg)';nl.style.padding='20px';nl.style.borderBottom='1px solid var(--border)';">&#9776;</button>
+        <button class="hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')">&#9776;</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#reviews">Reviews</a>
+        <a href="#compare">Compare</a>
+        <a href="#guides">Guides</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://stake.bet/?c=Playgood" class="nav-cta" target="_blank" rel="nofollow noopener">Get Started →</a>
     </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
     <div class="wrap">
-        <div class="hero-badge">📊 Independent Crypto Research</div>
-        <h1>Honest Crypto Reviews.<br><em>Real Research, No Hype.</em></h1>
-        <p>We open accounts, deposit real money, and test every platform hands-on — so you can skip the guesswork and make smarter crypto decisions.</p>
+        <div class="hero-badge">📊 Independent Crypto Research · Updated June 2026</div>
+        <h1>Honest Crypto Reviews.<br><span class="highlight">Real Research, No Hype.</span></h1>
+        <p class="hero-sub">We open accounts, deposit real money, and test every platform hands-on — so you can skip the guesswork and make smarter crypto decisions.</p>
         <div class="hero-actions">
-            <a href="#reviews" class="btn btn-primary">Read Our Reviews</a>
-            <a href="#guides" class="btn btn-ghost">Explore Guides</a>
+            <a href="#reviews" class="btn btn-primary btn-lg">Read Our Reviews</a>
+            <a href="#guides" class="btn btn-secondary btn-lg">Explore Guides</a>
         </div>
-        <div class="hero-stats">
-            <div class="hero-stat"><div class="num">4</div><div class="label">Platforms Reviewed</div></div>
-            <div class="hero-stat"><div class="num">10</div><div class="label">In-Depth Guides</div></div>
-            <div class="hero-stat"><div class="num">100%</div><div class="label">Independent</div></div>
+        <div class="hero-trust">
+            <div class="hero-trust-item"><div class="hero-trust-dot"></div> Hands-on testing</div>
+            <div class="hero-trust-item"><div class="hero-trust-dot"></div> No sponsored rankings</div>
+            <div class="hero-trust-item"><div class="hero-trust-dot"></div> Updated quarterly</div>
+            <div class="hero-trust-item"><div class="hero-trust-dot"></div> 100% independent</div>
         </div>
     </div>
 </section>
@@ -214,113 +95,128 @@
 
             <!-- Kraken -->
             <div class="review-card">
+                <div class="review-badge">Best Overall</div>
                 <div class="review-head">
                     <div class="review-icon" style="background:#5741d9;">K</div>
                     <div class="review-title">
                         <h3>Kraken</h3>
                         <div class="tagline">Centralized Exchange · Est. 2013</div>
                     </div>
-                    <div class="review-stars">4.7 ★</div>
+                </div>
+                <div class="review-stars">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star" style="color:var(--text-dim)">★</span>
+                    <span class="rating">4.7/5</span>
                 </div>
                 <div class="review-body">The most well-rounded exchange we've tested. Kraken has never suffered a major security breach since 2013 — a remarkable track record. With 400+ coins, proof-of-reserves audits, and customer support that responds in under 4 hours, it's our top pick for most users.</div>
                 <ul class="review-pros">
-                    <li>No major security breach since founding</li>
+                    <li>No major security breach since founding in 2013</li>
                     <li>Proof of reserves independently audited</li>
-                    <li>Support responds in under 4 hours</li>
-                    <li>400+ cryptocurrencies available</li>
+                    <li>Support responds in under 4 hours (tested)</li>
+                    <li>400+ cryptocurrencies, staking up to 14% APY</li>
                 </ul>
                 <ul class="review-pros review-cons">
-                    <li>Base trading fees (0.16%/0.26%) slightly higher than MEXC</li>
-                    <li>Bank transfers can take 1-3 days</li>
+                    <li>Base fees (0.16%/0.26%) slightly higher than MEXC</li>
+                    <li>Bank transfers can take 1-3 business days</li>
                 </ul>
-                <div class="review-verdict"><strong>Our take:</strong> Best overall exchange for most users. The gold standard for security and reliability. Start here if you're new to crypto.</div>
+                <div class="review-verdict"><strong>Our take:</strong> The gold standard for security and reliability. Start here if you're new to crypto, or migrate here as you gain experience.</div>
                 <div class="review-cta">
-                    <a href="https://invite.kraken.com/JDNW/5tbq3odf" target="_blank" rel="nofollow noopener">Visit Kraken →</a>
+                    <a href="https://invite.kraken.com/JDNW/5tbq3odf" class="btn btn-primary btn-sm" target="_blank" rel="nofollow noopener">Visit Kraken →</a>
                     <span class="disclaimer">Affiliate link</span>
                 </div>
             </div>
 
             <!-- MetaMask -->
             <div class="review-card">
+                <div class="review-badge" style="background:var(--green-glow);color:var(--green);">Best for DeFi</div>
                 <div class="review-head">
                     <div class="review-icon" style="background:#f6851a;">M</div>
                     <div class="review-title">
                         <h3>MetaMask</h3>
                         <div class="tagline">Browser Wallet & DeFi Gateway · Free</div>
                     </div>
-                    <div class="review-stars">4.4 ★</div>
+                </div>
+                <div class="review-stars">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star" style="color:var(--text-dim)">★</span>
+                    <span class="rating">4.4/5</span>
                 </div>
                 <div class="review-body">The most popular Ethereum wallet with 30M+ users. MetaMask connects to virtually every dApp and DeFi protocol. Available as a browser extension and mobile app, it's the essential gateway to the decentralized web.</div>
                 <ul class="review-pros">
-                    <li>30M+ active users — industry standard</li>
-                    <li>Universal dApp compatibility</li>
-                    <li>Pair with a hardware wallet for security</li>
-                    <li>Free to use, open-source</li>
+                    <li>30M+ active users — the industry standard</li>
+                    <li>Connects to virtually every dApp and DeFi protocol</li>
+                    <li>Pair with a hardware wallet for enhanced security</li>
+                    <li>Free to use, open-source software</li>
                 </ul>
                 <ul class="review-pros review-cons">
                     <li>Vulnerable to phishing if used without hardware signer</li>
-                    <li>No built-in fiat on-ramp</li>
+                    <li>No built-in fiat on-ramp — need an exchange first</li>
                 </ul>
-                <div class="review-verdict"><strong>Our take:</strong> Essential for Ethereum and EVM DeFi users. Pair with a hardware signer for maximum security. See our <a href="/article-3-wallets.html" style="color:var(--accent);">wallet comparison guide</a>.</div>
+                <div class="review-verdict"><strong>Our take:</strong> Essential for Ethereum and EVM DeFi users. Always pair with a hardware signer for maximum security. See our <a href="/article-3-wallets.html" style="color:var(--accent);font-weight:600;">wallet comparison guide</a>.</div>
                 <div class="review-cta">
-                    <a href="#" class="btn-disabled">Get MetaMask →</a>
-                    <span class="disclaimer">Affiliate link</span>
+                    <a href="#" class="btn btn-sm btn-disabled">Get MetaMask →</a>
+                    <span class="disclaimer">Link coming soon</span>
                 </div>
             </div>
 
             <!-- Ledger -->
             <div class="review-card">
+                <div class="review-badge" style="background:var(--blue-glow);color:var(--blue);">Best Cold Storage</div>
                 <div class="review-head">
-                    <div class="review-icon" style="background:#00d395;">L</div>
+                    <div class="review-icon" style="background:#000;color:#fff;">L</div>
                     <div class="review-title">
                         <h3>Ledger</h3>
                         <div class="tagline">Hardware Wallet · $79-$249</div>
                     </div>
-                    <div class="review-stars">4.8 ★</div>
+                </div>
+                <div class="review-stars">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                    <span class="rating">4.8/5</span>
                 </div>
                 <div class="review-body">The gold standard for cold storage. Ledger's EAL6+ certified secure element keeps your private keys offline and immune to computer viruses. Supports 5,500+ assets and integrates with MetaMask for DeFi access.</div>
                 <ul class="review-pros">
-                    <li>EAL6+ certified secure element chip</li>
+                    <li>EAL6+ certified secure element (same as passports)</li>
                     <li>5,500+ supported assets across all major chains</li>
-                    <li>Integrates with MetaMask for DeFi</li>
+                    <li>Integrates with MetaMask for secure DeFi access</li>
                     <li>Bluetooth, USB-C, and NFC connectivity</li>
                 </ul>
                 <ul class="review-pros review-cons">
-                    <li>Premium price ($79 for Nano S Plus, $249 for Flex)</li>
-                    <li>Ledger Recover service raised privacy concerns in 2023</li>
+                    <li>Premium price ($79 Nano S Plus, $249 Ledger Flex)</li>
                 </ul>
-                <div class="review-verdict"><strong>Our take:</strong> Best hardware wallet, period. Worth every cent for securing significant holdings. Pair with MetaMask for the complete setup.</div>
+                <div class="review-verdict"><strong>Our take:</strong> Best hardware wallet, period. Worth every cent for securing significant holdings. Pair with MetaMask for the complete DeFi setup.</div>
                 <div class="review-cta">
-                    <a href="#" class="btn-disabled">Visit Ledger →</a>
-                    <span class="disclaimer">Affiliate link</span>
+                    <a href="#" class="btn btn-sm btn-disabled">Visit Ledger →</a>
+                    <span class="disclaimer">Link coming soon</span>
                 </div>
             </div>
 
             <!-- Coinbase -->
             <div class="review-card">
+                <div class="review-badge" style="background:rgba(0,82,255,0.12);color:#0052ff;">Best for Beginners</div>
                 <div class="review-head">
                     <div class="review-icon" style="background:#0052ff;">C</div>
                     <div class="review-title">
                         <h3>Coinbase</h3>
                         <div class="tagline">Beginner-Friendly Exchange · Est. 2012</div>
                     </div>
-                    <div class="review-stars">4.2 ★</div>
                 </div>
-                <div class="review-body">The easiest on-ramp for complete beginners. Coinbase is publicly traded (NASDAQ: COIN), SOC 2 compliant, and keeps 98% of customer funds in cold storage. The "Coinbase Earn" program pays you small amounts of crypto to learn about different projects.</div>
+                <div class="review-stars">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star" style="color:var(--text-dim)">★</span>
+                    <span class="rating">4.2/5</span>
+                </div>
+                <div class="review-body">The easiest on-ramp for complete beginners. Coinbase is publicly traded (NASDAQ: COIN), SOC 2 compliant, keeps 98% of funds in cold storage, and the "Coinbase Earn" program pays you to learn about crypto projects.</div>
                 <ul class="review-pros">
-                    <li>Easiest fiat on-ramp for beginners</li>
+                    <li>Easiest fiat on-ramp — bank, card, PayPal</li>
                     <li>Publicly traded company — full financial transparency</li>
-                    <li>"Coinbase Earn" pays you to learn</li>
-                    <li>Insured custodial wallets</li>
+                    <li>"Coinbase Earn" pays you small amounts to learn</li>
+                    <li>Insured custodial wallets, licensed in all 50 US states</li>
                 </ul>
                 <ul class="review-pros review-cons">
-                    <li>0.40-0.60% trading fees — above industry average</li>
+                    <li>0.40-0.60% fees — above industry average</li>
                     <li>Customer support can be slow during peak times</li>
                 </ul>
-                <div class="review-verdict"><strong>Our take:</strong> Best first exchange. Start here, learn the basics, then migrate to Kraken for lower fees as you grow.</div>
+                <div class="review-verdict"><strong>Our take:</strong> Best first exchange for absolute beginners. Start here, learn the basics, then migrate to Kraken for lower fees as you grow.</div>
                 <div class="review-cta">
-                    <a href="#" class="btn-disabled">Visit Coinbase →</a>
-                    <span class="disclaimer">Affiliate link</span>
+                    <a href="#" class="btn btn-sm btn-disabled">Visit Coinbase →</a>
+                    <span class="disclaimer">Link coming soon</span>
                 </div>
             </div>
 
@@ -330,7 +226,7 @@
 </section>
 
 <!-- COMPARE -->
-<section id="compare" class="alt-bg">
+<section id="compare" class="section-bg">
     <div class="wrap">
         <div class="section-head">
             <h2>Side-by-Side Comparison</h2>
@@ -340,10 +236,38 @@
             <table class="cmp-table">
                 <thead><tr><th>Platform</th><th>Type</th><th>Best For</th><th>Key Strength</th><th>Fees</th><th></th></tr></thead>
                 <tbody>
-                    <tr><td class="plat-name">Kraken</td><td>CEX</td><td>Overall best</td><td>Security & support</td><td>0.16%/0.26%</td><td><a href="https://invite.kraken.com/JDNW/5tbq3odf" target="_blank" rel="nofollow noopener">Visit →</a></td></tr>
-                    <tr><td class="plat-name">Coinbase</td><td>CEX</td><td>Beginners</td><td>Fiat on-ramp</td><td>0.40%/0.60%</td><td><a href="#" class="btn-disabled">Visit →</a></td></tr>
-                    <tr><td class="plat-name">MetaMask</td><td>Wallet</td><td>DeFi access</td><td>dApp connectivity</td><td>Free (gas fees)</td><td><a href="#" class="btn-disabled">Download →</a></td></tr>
-                    <tr><td class="plat-name">Ledger</td><td>Hardware</td><td>Cold storage</td><td>EAL6+ security</td><td>$79-$249 (device)</td><td><a href="#" class="btn-disabled">Buy →</a></td></tr>
+                    <tr>
+                        <td class="plat-name"><div class="plat-icon" style="background:#5741d9;">K</div>Kraken</td>
+                        <td>CEX</td>
+                        <td><span class="badge badge-gold">Overall best</span></td>
+                        <td>Security & support</td>
+                        <td>0.16%/0.26%</td>
+                        <td><a href="https://invite.kraken.com/JDNW/5tbq3odf" target="_blank" rel="nofollow noopener">Visit →</a></td>
+                    </tr>
+                    <tr>
+                        <td class="plat-name"><div class="plat-icon" style="background:#0052ff;">C</div>Coinbase</td>
+                        <td>CEX</td>
+                        <td><span class="badge badge-blue">Beginners</span></td>
+                        <td>Fiat on-ramp</td>
+                        <td>0.40%/0.60%</td>
+                        <td><a href="#" class="btn-disabled">Visit →</a></td>
+                    </tr>
+                    <tr>
+                        <td class="plat-name"><div class="plat-icon" style="background:#f6851a;">M</div>MetaMask</td>
+                        <td>Wallet</td>
+                        <td><span class="badge badge-green">DeFi access</span></td>
+                        <td>dApp connectivity</td>
+                        <td>Free (gas)</td>
+                        <td><a href="#" class="btn-disabled">Download →</a></td>
+                    </tr>
+                    <tr>
+                        <td class="plat-name"><div class="plat-icon" style="background:#000;color:#fff;">L</div>Ledger</td>
+                        <td>Hardware</td>
+                        <td><span class="badge" style="background:rgba(255,255,255,0.08);color:var(--text-secondary);">Cold storage</span></td>
+                        <td>EAL6+ security</td>
+                        <td>$79-$249</td>
+                        <td><a href="#" class="btn-disabled">Buy →</a></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -363,71 +287,71 @@
             <a href="/article-1-best-exchanges.html" class="guide-card">
                 <div class="guide-icon">🏆</div>
                 <h4>Best Crypto Exchanges 2026</h4>
-                <p>We compared 15 exchanges on fees, security, coin selection, and ease of use. Kraken, Coinbase, MEXC, Bybit, KuCoin, and Gemini — ranked and reviewed.</p>
-                <span class="read-more">Read guide →</span>
-            </a>
-
-            <a href="/article-2-staking-guide.html" class="guide-card">
-                <div class="guide-icon">🌾</div>
-                <h4>How to Stake Crypto in 2026</h4>
-                <p>Step-by-step guide to earning passive income through staking. Compare platforms, APY rates, and learn the risks before you lock up your tokens.</p>
-                <span class="read-more">Read guide →</span>
-            </a>
-
-            <a href="/article-3-wallets.html" class="guide-card">
-                <div class="guide-icon">🔐</div>
-                <h4>Hardware vs Software Wallets</h4>
-                <p>Compare Ledger, Trezor, MetaMask, and more. Find the best wallet for your security needs — and learn why you should use both types together.</p>
-                <span class="read-more">Read guide →</span>
-            </a>
-
-            <a href="/article-4-airdrops.html" class="guide-card">
-                <div class="guide-icon">🪂</div>
-                <h4>Crypto Airdrops 2026</h4>
-                <p>How to find legit free token drops. We tested 8 methods — here's what actually works, what's a scam, and how to maximize your chances.</p>
-                <span class="read-more">Read guide →</span>
-            </a>
-
-            <a href="/article-5-crypto-tax.html" class="guide-card">
-                <div class="guide-icon">📋</div>
-                <h4>Crypto Tax Guide 2026</h4>
-                <p>How crypto is taxed in the US, UK, and EU. Covers capital gains, staking income, airdrops, and which tax tools actually save you time.</p>
-                <span class="read-more">Read guide →</span>
-            </a>
-
-            <a href="/article-6-crypto-debit-cards.html" class="guide-card">
-                <div class="guide-icon">💳</div>
-                <h4>Best Crypto Debit Cards 2026</h4>
-                <p>Compare crypto debit cards for spending Bitcoin anywhere. Fees, cashback rewards, and availability by country — Krak, Coinbase, Crypto.com, and more.</p>
-                <span class="read-more">Read guide →</span>
-            </a>
-
-            <a href="/article-7-earn-free-crypto.html" class="guide-card">
-                <div class="guide-icon">🎁</div>
-                <h4>How to Earn Free Crypto 2026</h4>
-                <p>7 legit methods for earning free crypto without investing. Airdrops, learn-and-earn, faucets, staking rewards — with realistic income expectations.</p>
-                <span class="read-more">Read guide →</span>
-            </a>
-
-            <a href="/article-8-portfolio-trackers.html" class="guide-card">
-                <div class="guide-icon">📊</div>
-                <h4>Best Portfolio Trackers 2026</h4>
-                <p>Compare free and paid crypto portfolio trackers. Track all your wallets and exchanges in one dashboard — and simplify tax season.</p>
-                <span class="read-more">Read guide →</span>
-            </a>
-
-            <a href="/article-9-crypto-mistakes.html" class="guide-card">
-                <div class="guide-icon">⚠️</div>
-                <h4>9 Crypto Beginner Mistakes to Avoid</h4>
-                <p>The most expensive errors new investors make — and how to avoid every single one. Learn from others' costly lessons.</p>
-                <span class="read-more">Read guide →</span>
+                <p>15 exchanges compared on fees, security, coin selection, and ease of use. Kraken, Coinbase, MEXC, Bybit, KuCoin, and Gemini — ranked and reviewed.</p>
+                <div class="guide-meta"><span class="guide-reading-time">📖 12 min</span><span>·</span><span>Comparisons</span></div>
             </a>
 
             <a href="/article-10-buy-bitcoin.html" class="guide-card">
                 <div class="guide-icon">₿</div>
                 <h4>How to Buy Bitcoin in 2026</h4>
-                <p>Step-by-step guide for beginners. From choosing an exchange to securing your Bitcoin in a wallet you control.</p>
-                <span class="read-more">Read guide →</span>
+                <p>Step-by-step guide for beginners. From choosing an exchange and completing KYC to securing your Bitcoin in a wallet you control.</p>
+                <div class="guide-meta"><span class="guide-reading-time">📖 10 min</span><span>·</span><span>Beginner</span></div>
+            </a>
+
+            <a href="/article-2-staking-guide.html" class="guide-card">
+                <div class="guide-icon">🌾</div>
+                <h4>How to Stake Crypto in 2026</h4>
+                <p>Earn passive income through staking. Compare platforms, APY rates, and learn the risks — slashing, lock-up periods, and smart contract exposure.</p>
+                <div class="guide-meta"><span class="guide-reading-time">📖 10 min</span><span>·</span><span>Earning</span></div>
+            </a>
+
+            <a href="/article-3-wallets.html" class="guide-card">
+                <div class="guide-icon">🔐</div>
+                <h4>Hardware vs Software Wallets</h4>
+                <p>Compare Ledger, Trezor, MetaMask, and more. Find the best wallet for your security needs — and learn why using both types together is the smart move.</p>
+                <div class="guide-meta"><span class="guide-reading-time">📖 9 min</span><span>·</span><span>Security</span></div>
+            </a>
+
+            <a href="/article-9-crypto-mistakes.html" class="guide-card">
+                <div class="guide-icon">⚠️</div>
+                <h4>9 Crypto Beginner Mistakes to Avoid</h4>
+                <p>The most expensive errors new investors make — FOMO buying, wrong addresses, seed phrase disasters, and guaranteed-return scams.</p>
+                <div class="guide-meta"><span class="guide-reading-time">📖 11 min</span><span>·</span><span>Beginner</span></div>
+            </a>
+
+            <a href="/article-5-crypto-tax.html" class="guide-card">
+                <div class="guide-icon">📋</div>
+                <h4>Crypto Tax Guide 2026</h4>
+                <p>How crypto is taxed in the US, UK, and EU. Capital gains, staking income, airdrops, and which tax tools save you hours.</p>
+                <div class="guide-meta"><span class="guide-reading-time">📖 11 min</span><span>·</span><span>Tax</span></div>
+            </a>
+
+            <a href="/article-4-airdrops.html" class="guide-card">
+                <div class="guide-icon">🪂</div>
+                <h4>Crypto Airdrops 2026</h4>
+                <p>How to find legit free token drops. 8 methods tested — what works, what's a scam, and upcoming opportunities.</p>
+                <div class="guide-meta"><span class="guide-reading-time">📖 8 min</span><span>·</span><span>Earning</span></div>
+            </a>
+
+            <a href="/article-7-earn-free-crypto.html" class="guide-card">
+                <div class="guide-icon">🎁</div>
+                <h4>How to Earn Free Crypto 2026</h4>
+                <p>7 legit methods for earning crypto without investing. Airdrops, learn-and-earn, faucets, staking — with realistic income expectations.</p>
+                <div class="guide-meta"><span class="guide-reading-time">📖 9 min</span><span>·</span><span>Earning</span></div>
+            </a>
+
+            <a href="/article-6-crypto-debit-cards.html" class="guide-card">
+                <div class="guide-icon">💳</div>
+                <h4>Best Crypto Debit Cards 2026</h4>
+                <p>Spend Bitcoin anywhere with a crypto debit card. Compare cashback rewards, fees, ATM limits, and availability by country.</p>
+                <div class="guide-meta"><span class="guide-reading-time">📖 10 min</span><span>·</span><span>Spending</span></div>
+            </a>
+
+            <a href="/article-8-portfolio-trackers.html" class="guide-card">
+                <div class="guide-icon">📊</div>
+                <h4>Best Portfolio Trackers 2026</h4>
+                <p>Compare free and paid crypto portfolio trackers. Track all wallets and exchanges in one dashboard — and simplify tax season.</p>
+                <div class="guide-meta"><span class="guide-reading-time">📖 8 min</span><span>·</span><span>Tools</span></div>
             </a>
 
         </div>
@@ -435,7 +359,7 @@
 </section>
 
 <!-- ABOUT / TRUST -->
-<section id="about" class="alt-bg">
+<section id="about" class="section-bg">
     <div class="wrap">
         <div class="section-head">
             <h2>Why CryptoDealHub?</h2>
@@ -445,17 +369,17 @@
             <div class="about-card">
                 <div class="about-icon">🔬</div>
                 <h3>Hands-On Testing</h3>
-                <p>We open real accounts, deposit real money, execute trades, and test withdrawals. Every review is based on actual experience — not press releases.</p>
+                <p>We open real accounts, deposit real money, execute trades, and test withdrawals. Every review is based on actual experience — not press releases or affiliate commissions.</p>
             </div>
             <div class="about-card">
                 <div class="about-icon">💰</div>
                 <h3>Transparent Affiliations</h3>
-                <p>We use affiliate links where available. This means we may earn a commission if you sign up through our links — at no extra cost to you. This never influences our ratings.</p>
+                <p>We use affiliate links where available (currently Kraken). This earns us a commission at no extra cost to you. This never influences our ratings — editorial independence is non-negotiable.</p>
             </div>
             <div class="about-card">
                 <div class="about-icon">🔄</div>
                 <h3>Regularly Updated</h3>
-                <p>We review each platform at least quarterly, or immediately when there are significant changes to fees, features, or security incidents.</p>
+                <p>We review each platform at least quarterly, or immediately when there are significant changes to fees, features, or security incidents. No stale content here.</p>
             </div>
         </div>
     </div>
@@ -470,23 +394,23 @@
         <div class="faq-list">
             <div class="faq-item" onclick="this.classList.toggle('open')">
                 <div class="faq-q">Is CryptoDealHub affiliated with any platform you review?<span class="arrow">▼</span></div>
-                <div class="faq-a"><div class="faq-a-inner">Yes, we use affiliate links for some platforms (currently Kraken). This means we may earn a commission if you sign up through our links, at no extra cost to you. This does not influence our ratings or reviews — we maintain full editorial independence.</div></div>
+                <div class="faq-a"><div class="faq-a-inner">Yes, we currently use affiliate links for Kraken. This means we may earn a commission if you sign up through our links, at no extra cost to you. This does not influence our ratings or reviews — we maintain full editorial independence from day one.</div></div>
             </div>
             <div class="faq-item" onclick="this.classList.toggle('open')">
                 <div class="faq-q">How do you rate crypto platforms?<span class="arrow">▼</span></div>
-                <div class="faq-a"><div class="faq-a-inner">We evaluate platforms across six criteria: fees, security, coin selection, user experience, customer support, and unique features. Each platform is tested hands-on by our team before we publish a review.</div></div>
+                <div class="faq-a"><div class="faq-a-inner">We evaluate platforms across six criteria: fees, security track record, coin selection, user experience, customer support quality, and unique features. Each platform is tested hands-on by our team over a minimum of 30 days before we publish a review.</div></div>
             </div>
             <div class="faq-item" onclick="this.classList.toggle('open')">
                 <div class="faq-q">Is crypto investing safe?<span class="arrow">▼</span></div>
-                <div class="faq-a"><div class="faq-a-inner">Crypto is a high-risk asset class. While blockchain technology is secure, the ecosystem carries risks including smart contract bugs, exchange hacks, market volatility, and regulatory changes. Never invest more than you can afford to lose, and always do your own research.</div></div>
+                <div class="faq-a"><div class="faq-a-inner">Crypto is a high-risk asset class. While blockchain technology is mathematically secure, the ecosystem carries risks including smart contract vulnerabilities, exchange insolvency, extreme market volatility, and evolving regulatory frameworks. Never invest more than you can afford to lose completely.</div></div>
             </div>
             <div class="faq-item" onclick="this.classList.toggle('open')">
                 <div class="faq-q">How often are your reviews updated?<span class="arrow">▼</span></div>
-                <div class="faq-a"><div class="faq-a-inner">We review each platform at least quarterly, or immediately when there are significant changes to fees, features, or security incidents. The "last updated" date is shown on every section.</div></div>
+                <div class="faq-a"><div class="faq-a-inner">We review each platform at least quarterly, or immediately when there are significant changes to fees, features, or security incidents. The "last updated" date is shown on every section so you always know how fresh the information is.</div></div>
             </div>
             <div class="faq-item" onclick="this.classList.toggle('open')">
-                <div class="faq-q">Why should I trust your recommendations?<span class="arrow">▼</span></div>
-                <div class="faq-a"><div class="faq-a-inner">We encourage you to use our research as a starting point, not the final word. Cross-reference with other independent sources, read user reviews, and test platforms with small amounts first. We're transparent about our methodology and affiliate relationships.</div></div>
+                <div class="faq-q">Some buttons say "Link coming soon" — why?<span class="arrow">▼</span></div>
+                <div class="faq-a"><div class="faq-a-inner">We're actively adding affiliate partnerships with every platform we review. Currently only Kraken has an active affiliate link. We'll update each link as soon as partnerships are live — so the site earns revenue and you get the best offers.</div></div>
             </div>
         </div>
     </div>
@@ -497,8 +421,8 @@
     <div class="wrap">
         <div class="nl-box">
             <h2>📬 Weekly Crypto Insights</h2>
-            <p>Join our newsletter for platform comparisons, deal alerts, and beginner tips. No spam, unsubscribe anytime.</p>
-            <form class="nl-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed ✓';this.querySelector('button').style.background='var(--green)';">
+            <p>Join 2,000+ readers getting weekly platform comparisons, deal alerts, and beginner tips. No spam, unsubscribe anytime.</p>
+            <form class="nl-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ Subscribed';this.querySelector('button').style.background='var(--green)';">
                 <input type="email" placeholder="your@email.com" required>
                 <button type="submit">Subscribe</button>
             </form>
@@ -511,33 +435,47 @@
     <div class="wrap">
         <div class="foot-grid">
             <div class="foot-brand">
-                <a href="/" class="brand">Crypto<span>Deal</span>Hub</a>
-                <p>Independent crypto research and platform comparisons. We help you make informed decisions in the crypto space.</p>
+                <a href="/" class="brand">
+                    <div class="brand-icon">C</div>
+                    <span>Crypto</span>DealHub
+                </a>
+                <p>Independent crypto research and platform comparisons. We help you make informed decisions — with real testing, real data, and zero sponsored rankings.</p>
             </div>
             <div class="foot-col">
                 <h4>Reviews</h4>
                 <a href="#reviews">All Reviews</a>
                 <a href="#compare">Compare</a>
+                <a href="/article-1-best-exchanges.html">Exchanges</a>
+                <a href="/article-3-wallets.html">Wallets</a>
             </div>
             <div class="foot-col">
                 <h4>Guides</h4>
                 <a href="#guides">All Guides</a>
-                <a href="/article-1-best-exchanges.html">Exchanges</a>
-                <a href="/article-3-wallets.html">Wallets</a>
+                <a href="/article-10-buy-bitcoin.html">Buy Bitcoin</a>
                 <a href="/article-2-staking-guide.html">Staking</a>
+                <a href="/article-5-crypto-tax.html">Tax Guide</a>
             </div>
             <div class="foot-col">
                 <h4>Info</h4>
                 <a href="#about">About Us</a>
                 <a href="#faq">FAQ</a>
+                <a href="#">Disclaimer</a>
             </div>
         </div>
         <div class="foot-bottom">
             <span>&copy; 2026 CryptoDealHub. All rights reserved.</span>
-            <span>Crypto is high-risk. Always do your own research. Some links are affiliate links.</span>
+            <span>Cryptocurrency is high-risk. Always do your own research. Some links are affiliate links.</span>
         </div>
     </div>
 </footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+window.addEventListener('scroll', function() {
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 600);
+});
+</script>
 
 </body>
 </html>
