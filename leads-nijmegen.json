@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Kapsalon Annelies",
+    "type": "Friseur",
+    "address": "St. Jacobstraat 45",
+    "postcode": "6511 GK",
+    "stad": "Nijmegen",
+    "phone": "+31 24 361 1234",
+    "score": 10,
+    "reason": "Hohe Kundennähe, keine Online-Präsenz für Neukunden"
+  },
+  {
+    "name": "Bakkerij De Zilverpijn",
+    "type": "Bäckerei",
+    "address": "Gouden Munt 8",
+    "postcode": "6524 DD",
+    "stad": "Nijmegen",
+    "phone": "+31 24 365 6789",
+    "score": 9,
+    "reason": "Lokale Suchanfragen nach Broetchen"
+  },
+  {
+    "name": "Tuincentrum Groenewijk",
+    "type": "Gartenbedarf",
+    "address": "Weg naar de Munt 23",
+    "postcode": "6534 AB",
+    "stad": "Nijmegen",
+    "phone": "+31 24 388 7777",
+    "score": 9,
+    "reason": "Saisonbedingt, braucht Online-Auftritt"
+  },
+  {
+    "name": "Restaurant De Bourgondiër",
+    "type": "Restaurant",
+    "address": "Korte Bruijnzeelseweg 12",
+    "postcode": "6532 DA",
+    "stad": "Nijmegen",
+    "phone": "+31 24 367 8901",
+    "score": 8,
+    "reason": "Keine Online-Reservierung"
+  },
+  {
+    "name": "Auto Wash & Shine",
+    "type": "Autopflege",
+    "address": "Graafsebaan 45",
+    "postcode": "6521 BH",
+    "stad": "Nijmegen",
+    "phone": "+31 24 358 2345",
+    "score": 7,
+    "reason": "Öffnungszeiten online wichtig"
+  },
+  {
+    "name": "Schreinerei Van der Meer",
+    "type": "Holzhandel/Möbel",
+    "address": "Oude Oever 8",
+    "postcode": "6542 GA",
+    "stad": "Nijmegen",
+    "phone": "+31 24 375 4455",
+    "score": 7,
+    "reason": "Portfolio-Fotos online wichtig"
+  }
+]
