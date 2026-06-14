@@ -94,14 +94,8 @@ img { max-width: 100%; display: block; }
   text-decoration: none; letter-spacing: -0.5px;
   display: flex; align-items: center; gap: 10px;
 }
-.brand-icon {
-  width: 34px; height: 34px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-  border-radius: var(--radius-sm);
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 900; color: #000; font-size: 1.1rem;
-  box-shadow: 0 2px 8px rgba(245,158,11,0.3);
-}
+.brand-logo { width: 36px; height: 36px; flex-shrink: 0; }
+.brand-highlight { color: var(--accent); }
 .nav-links { display: flex; gap: 4px; align-items: center; }
 .nav-links a {
   color: var(--text-secondary); text-decoration: none;

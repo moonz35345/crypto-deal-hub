@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="hub-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="hub-grad-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background rounded square -->
+  <rect x="8" y="8" width="184" height="184" rx="40" fill="#0f1629" stroke="url(#hub-grad)" stroke-width="3"/>
+  
+  <!-- Inner hexagon shape (crypto/hub symbol) -->
+  <polygon points="100,30 155,65 155,135 100,170 45,135 45,65" fill="none" stroke="url(#hub-grad)" stroke-width="3" opacity="0.3"/>
+  
+  <!-- Central "CDH" monogram -->
+  <text x="100" y="95" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="52" font-weight="900" fill="url(#hub-grad)" filter="url(#glow)">CD</text>
+  
+  <!-- Hub icon below -->
+  <circle cx="100" cy="125" r="12" fill="none" stroke="url(#hub-grad-dark)" stroke-width="2.5"/>
+  <circle cx="100" cy="125" r="4" fill="url(#hub-grad)"/>
+  
+  <!-- Decorative dots at hex points -->
+  <circle cx="100" cy="30" r="3" fill="url(#hub-grad)" opacity="0.6"/>
+  <circle cx="155" cy="65" r="3" fill="url(#hub-grad)" opacity="0.6"/>
+  <circle cx="155" cy="135" r="3" fill="url(#hub-grad)" opacity="0.6"/>
+  <circle cx="100" cy="170" r="3" fill="url(#hub-grad)" opacity="0.6"/>
+  <circle cx="45" cy="135" r="3" fill="url(#hub-grad)" opacity="0.6"/>
+  <circle cx="45" cy="65" r="3" fill="url(#hub-grad)" opacity="0.6"/>
+</svg>
