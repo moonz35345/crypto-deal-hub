@@ -1,40 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <linearGradient id="hub-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#d97706"/>
+      <stop offset="50%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ef4444"/>
     </linearGradient>
-    <linearGradient id="hub-grad-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g2" x1="0%" y1="100%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#3b82f6"/>
-      <stop offset="100%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
     </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#f59e0b" flood-opacity="0.3"/>
+    </filter>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <clipPath id="circle-clip">
+      <circle cx="256" cy="256" r="240"/>
+    </clipPath>
   </defs>
   
-  <!-- Background rounded square -->
-  <rect x="8" y="8" width="184" height="184" rx="40" fill="#0f1629" stroke="url(#hub-grad)" stroke-width="3"/>
+  <!-- Outer ring -->
+  <circle cx="256" cy="256" r="248" fill="none" stroke="url(#g1)" stroke-width="4" opacity="0.5"/>
   
-  <!-- Inner hexagon shape (crypto/hub symbol) -->
-  <polygon points="100,30 155,65 155,135 100,170 45,135 45,65" fill="none" stroke="url(#hub-grad)" stroke-width="3" opacity="0.3"/>
+  <!-- Main background circle -->
+  <circle cx="256" cy="256" r="240" fill="#0f1629"/>
   
-  <!-- Central "CDH" monogram -->
-  <text x="100" y="95" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="52" font-weight="900" fill="url(#hub-grad)" filter="url(#glow)">CD</text>
+  <!-- Inner decorative ring -->
+  <circle cx="256" cy="256" r="200" fill="none" stroke="url(#g3)" stroke-width="1.5" opacity="0.2"/>
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#g2)" stroke-width="1" opacity="0.15"/>
   
-  <!-- Hub icon below -->
-  <circle cx="100" cy="125" r="12" fill="none" stroke="url(#hub-grad-dark)" stroke-width="2.5"/>
-  <circle cx="100" cy="125" r="4" fill="url(#hub-grad)"/>
+  <!-- Stylized "C" shape - curved arrow / deal handshake -->
+  <path d="M160 256 C160 180, 220 130, 300 140 L290 165 C230 158, 190 195, 190 256 C190 317, 230 354, 290 347 L300 372 C220 382, 160 332, 160 256Z" fill="url(#g1)" filter="url(#shadow)"/>
   
-  <!-- Decorative dots at hex points -->
-  <circle cx="100" cy="30" r="3" fill="url(#hub-grad)" opacity="0.6"/>
-  <circle cx="155" cy="65" r="3" fill="url(#hub-grad)" opacity="0.6"/>
-  <circle cx="155" cy="135" r="3" fill="url(#hub-grad)" opacity="0.6"/>
-  <circle cx="100" cy="170" r="3" fill="url(#hub-grad)" opacity="0.6"/>
-  <circle cx="45" cy="135" r="3" fill="url(#hub-grad)" opacity="0.6"/>
-  <circle cx="45" cy="65" r="3" fill="url(#hub-grad)" opacity="0.6"/>
+  <!-- Stylized "D" shape - interlocking -->
+  <path d="M260 170 C340 170, 380 210, 380 256 C380 302, 340 342, 260 342 L260 312 C320 312, 350 288, 350 256 C350 224, 320 200, 260 200 Z" fill="url(#g2)" opacity="0.9"/>
+  
+  <!-- Connection dots - representing deals/hub -->
+  <circle cx="256" cy="100" r="6" fill="url(#g1)" filter="url(#glow)"/>
+  <circle cx="390" cy="180" r="5" fill="url(#g2)" filter="url(#glow)"/>
+  <circle cx="412" cy="256" r="6" fill="url(#g3)" filter="url(#glow)"/>
+  <circle cx="390" cy="332" r="5" fill="url(#g1)" filter="url(#glow)"/>
+  <circle cx="256" cy="412" r="6" fill="url(#g2)" filter="url(#glow)"/>
+  <circle cx="122" cy="332" r="5" fill="url(#g3)" filter="url(#glow)"/>
+  <circle cx="100" cy="256" r="6" fill="url(#g1)" filter="url(#glow)"/>
+  <circle cx="122" cy="180" r="5" fill="url(#g2)" filter="url(#glow)"/>
+  
+  <!-- Center spark / deal indicator -->
+  <polygon points="256,220 268,248 296,248 274,266 282,294 256,276 230,294 238,266 216,248 244,248" fill="#fff" opacity="0.9" filter="url(#glow)"/>
+  
+  <!-- Small accent lines -->
+  <line x1="256" y1="60" x2="256" y2="80" stroke="url(#g1)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <line x1="256" y1="432" x2="256" y2="452" stroke="url(#g2)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <line x1="60" y1="256" x2="80" y2="256" stroke="url(#g3)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <line x1="432" y1="256" x2="452" y2="256" stroke="url(#g1)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
 </svg>
