@@ -1,1 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#F6851A"/><path d="M22.5 9L17 14L18 11L22.5 9Z" fill="#E2762B"/><path d="M9.5 9L15 14L14 11L9.5 9Z" fill="#E4762B"/><path d="M20 17L18 20L22 21L23.5 17H20Z" fill="#763D16"/><path d="M8.5 17L10 20L14 20L12 17H8.5Z" fill="#763D16"/><path d="M12 15L10.5 17H15L14.5 13L12 15Z" fill="#763D16"/><path d="M16 15L16.5 17L20.5 17L19 15H16Z" fill="#763D16"/><path d="M12 20L14 21.5L9.5 20.5L12 20Z" fill="#C0AD9E"/><path d="M16 20L18 20L15.5 21L16 20Z" fill="#C0AD9E"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="mg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6851A"/>
+      <stop offset="100%" stop-color="#E2761B"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="url(#mg)"/>
+  <!-- Fox face outline -->
+  <path d="M50 15L25 35V65L50 85L75 65V35L50 15Z" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.5"/>
+  <!-- Ears -->
+  <path d="M30 35L15 20L35 30" fill="rgba(255,255,255,0.2)"/>
+  <path d="M70 35L85 20L65 30" fill="rgba(255,255,255,0.2)"/>
+  <!-- Eyes -->
+  <ellipse cx="38" cy="48" rx="5" ry="6" fill="white"/>
+  <ellipse cx="62" cy="48" rx="5" ry="6" fill="white"/>
+  <circle cx="38" cy="49" r="2.5" fill="#F6851A"/>
+  <circle cx="62" cy="49" r="2.5" fill="#F6851A"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="60" rx="4" ry="3" fill="white"/>
+  <!-- Mouth -->
+  <path d="M50 63Q42 70 35 68" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M50 63Q58 70 65 68" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
